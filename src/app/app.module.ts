@@ -7,18 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OwnerModule } from './owner/owner.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    OwnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
