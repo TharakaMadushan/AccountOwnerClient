@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Account } from './../../../_interfaces/account.model';
+import { Account } from '../../../_interfaces/account.model';
 
 @Component({
   selector: 'app-owner-accounts',

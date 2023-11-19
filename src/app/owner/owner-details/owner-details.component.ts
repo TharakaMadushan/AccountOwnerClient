@@ -1,4 +1,4 @@
-import { Account } from './../../_interfaces/account.model';
+import { Account } from '../../_interfaces/account.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Owner } from './../../_interfaces/owner.model';
