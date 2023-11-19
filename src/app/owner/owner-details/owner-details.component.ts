@@ -1,3 +1,4 @@
+import { Account } from './../../_interfaces/account.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Owner } from './../../_interfaces/owner.model';
@@ -33,6 +34,10 @@ export class OwnerDetailsComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       }
     })
+  }
+
+  printToConsole= (param: Account) => {
+    console.log('Account parameter from the child component', param)
   }
 
 }
