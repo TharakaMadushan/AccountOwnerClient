@@ -1,4 +1,5 @@
-import { OwnerForCreation } from 'src/app/_interfaces/OwnerForCreation.model';
+import { OwnerForUpdate } from './../../_interfaces/ownerForUpdate.model';
+import { OwnerForCreation } from './../../_interfaces/ownerForCreation.model';
 import { Owner } from './../../_interfaces/owner.model';
 import { EnvironmentUrlService } from './environment-url.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -23,7 +24,7 @@ export class OwnerRepositoryService {
     return this.http.post<Owner>(this.createCompleteRoute(route, this.envUrl.urlAddress), owner, this.generateHeaders());
   }
 
-  public updateOwner = (route: string, owner: Owner) => {
+  public updateOwner = (route: string, owner: OwnerForUpdate) => {
     return this.http.put(this.createCompleteRoute(route, this.envUrl.urlAddress), owner, this.generateHeaders());
   }
 
